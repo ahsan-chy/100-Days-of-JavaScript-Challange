@@ -9,6 +9,8 @@ most of them asked in interview.
 | Day | Questions & Problem Solved           |
 | :-- | :--------------------------          |
 | 1   | Find **[Largest & Smallest](https://github.com/ahsan-chy/javascript-concepts/tree/javascript-concepts/100%20Days%20of%20JavaScript/Day%201)** in Array |
+| :-- | :--------------------------          |
+| 2   | **[Objects & Object Methods](https://github.com/ahsan-chy/100-Days-of-JavaScript-Challange/tree/day2/100%20Days%20of%20JavaScript/Day%202)** |
 
 
 
