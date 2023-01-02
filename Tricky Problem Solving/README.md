@@ -1,7 +1,7 @@
 
 ### Question: 1
  
-- Make a function in which users pass 50 inside the function parameter and the function will return 51 and if user pass 51 it will return 50.
+- Make a function in which users pass 1 inside the function parameter and the function will return 2 and if user pass 2 it will return 1.
 - Make sure you may not use this in javascript function  **==, ===, + - / %, if, if else, switch, case** 
 
 ```javascript
