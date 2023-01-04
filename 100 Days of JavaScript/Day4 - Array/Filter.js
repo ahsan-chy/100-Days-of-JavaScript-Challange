@@ -1,3 +1,10 @@
+// Arrow function
+// filter((element) => { /* … */ })
+// filter((element, index) => { /* … */ })
+// filter((element, index, array) => { /* … */ })
+
+// Filter(element, index, array)
+
 let man = {
 	'Students': [{
 			"name": "Raj",

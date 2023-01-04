@@ -49,7 +49,6 @@ let result3 = score2.sort().findIndex((f) => f>20 && f<91)
 
 // ---- Method 2 ----//
 const Season = [
-    
     {
         month:'March',
         season: 'Spring',
