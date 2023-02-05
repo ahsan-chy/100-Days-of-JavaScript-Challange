@@ -117,8 +117,62 @@ console.log(typeof JSON.parse(person), JSON.parse(person));
 
 ```
 
-## String - String Methods
+# How javascript work???? 👩‍💻
 
-## Array - Array Methods
 
-## Function
+![Execution Context](https://miro.medium.com/max/1400/1*y8oX0ddZ8vXcOnRIM2yjzw.png)
+
+![Execution Context1](https://blog.openreplay.com/images/explaining-javascript-s-execution-context-and-stack/images/RPVavBq.png)
+
+![Execution Context](https://miro.medium.com/max/1400/0*dKwyj2wjGZ_ZJLxj.gif)
+
+
+## 🚀 Execution Context
+- #### An environment where the Javascript code is Evaluated & Executed. 
+- #### Execution context contains the code that's currently running and everything that aids in it execution.
+
+
+![Global Object](https://www.javascripttutorial.net/wp-content/uploads/2019/12/javascript-execution-context-global-execution-context-in-creation-phase.png)
+
+When the JavaScript engine executes a script for the first time, it creates the **`global`** execution context. During this phase, the JavaScript engine performs the following tasks:
+
+Create the global object i.e., **`window`** in the web browser or **`global`** in Node.js.
+Create the this object and bind it to the global object.
+
+[Detail Article](https://www.javascripttutorial.net/javascript-execution-context/)
+
+
+### There are two kinds of Execution Context in JavaScript:
+
+- Global Execution Context (GEC)
+- Function Execution Context (FEC)
+
+
+.
+
+
+
+## ⚡️ Global Execution Context (GEC)
+
+- The **`Global Execution Context`** is created when JAVASCRIPT start to run, and it represents Global Scope in JAVASCRIPT. 
+
+- Variables, and Function that is not inside any Function. A new **`Execution Context`** gets created every time a Function is executed. 
+
+- The Global Execution Context just like any other Execution Context, except that it gets created default. It is associated with **`Global Object`** . When means a window Object
+
+```javascript
+this === window
+```
+```javascript
+name == window.name
+```
+
+
+
+## ⚡️Function Execution Context (FEC)
+Whenever a function is called, the JavaScript engine creates a different type of Execution Context known as a Function Execution Context (FEC) within the GEC to evaluate and execute the code within that function.
+
+[Detail Article](https://www.freecodecamp.org/news/execution-context-how-javascript-works-behind-the-scenes/)
+## Execution Stack
+
+Execution Stack, also known as "Call Stack" is a stack with a LIFO(Last In First Out) structure, which is used to store all the Execution context created during code execution. 
