@@ -117,6 +117,7 @@ console.log(typeof JSON.parse(person), JSON.parse(person));
 
 ```
 
+
 # How javascript work???? 👩‍💻
 
 
@@ -165,6 +166,28 @@ this === window
 ```
 ```javascript
 name == window.name
+```
+
+ - Before your **javascript(.js)** file run there is global execution context that is created even file is empty.Two phase Creation phase and Execution Phase.
+ - In creation phase **GEC** create global object and **this.** In browser global object will be browser.Javascript engines allocate memory **for function** even before your code run.
+ - After creation phase,There is Execution phase.
+
+```javascript
+sayHi() //hello
+function sayHi(){
+console.log("hello")
+}
+```
+
+Javascript already know your function even before it is executed
+because of hoisting as in creation phase it memorized all javascript function 
+declaration.
+
+```javascript
+sayHi(); //error out because of sayHi is const varible not exact function.
+const sayHi= function (){
+console.log("hey")
+}
 ```
 
 
