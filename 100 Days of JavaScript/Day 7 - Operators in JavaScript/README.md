@@ -66,6 +66,18 @@ They are called – falsy values. If any of these is the first argument of ||, t
 
 **Optional chaining (?.)** checks for null or undefined. It returns undefined instead of throwing an error.
 ```javascript
+const arr = [
+  ['a', 'b'],
+  ['c', 'd'],
+];
+
+console.log(arr?.[0]); // 👉️ ['a', 'b']
+console.log(arr?.[0]?.[0]); // 👉️ a
+console.log(arr?.[0]?.[0]?.[1]); // 👉️ undefined
+console.log(arr?.[0]?.[1]?.[0]?.[0]); // 👉️ b
+
+```
+```javascript
 const products = {
   name: 'Power Bank',
   Rating: {
