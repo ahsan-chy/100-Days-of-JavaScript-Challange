@@ -179,7 +179,7 @@ console.log(filteredStudent);
 ```
 
 ## Push()
-In JavaScript, you can add new values to an array using the push() method. The push() method adds one or more elements to the end of an array and returns the new length of the array.
+In JavaScript, you can add new values to an array using the push() method. The push() method **adds one or more elements to the `end` of an array** and returns the new length of the array.
 
 ```javascript
 let myArray = [1, 2, 3];
@@ -195,7 +195,7 @@ console.log(myArray); // [1, 2, 3, 4, 5, 6]
 
 ```
 ## unshift()
-In JavaScript, you can add a new element to the beginning of an array using the unshift() method. The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+In JavaScript, you can **add a new element to the `beginning` of an array using the unshift()** method. The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
 ```javascript
 let myArray = [2, 3, 4];
 myArray.unshift(1); // adds 1 to the beginning of the array
@@ -207,7 +207,7 @@ console.log(myArray); // [1, 2, 3, 4]
 
 ```
 ## splice()
-In JavaScript, you can add a new element at any position within an array using the splice() method. The splice() method allows you to add, remove, or replace elements in an array.
+In JavaScript, you can **add a new element at `any position` within an array using the splice()** method. The splice() method allows you to add, remove, or replace elements in an array.
 
 The splice() method takes three arguments: the index at which to start adding elements, the number of elements to remove (if any), and the new element(s) to add. If you don't want to remove any elements, you can set the second argument to 0.
 
