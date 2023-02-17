@@ -1,17 +1,29 @@
 
 # Array Method
 
-Array Methods:
+Here are some of the most commonly used methods of arrays in JavaScript:
+
 - Find 
 - findIndex
 - indexOf
 - Filter
 - Map 
 - Reduce
-- 
+
+Some Other Methods in Array
+- push()
+- pop()
+- unshift()
+- shift()
+- splice()
+- slice()
+- concat()
+- join()
+- reverse()
+- sort()
 
 
-## Array Find Method
+## Find
 
 
 // ---- Method 1 ----//
@@ -163,5 +175,66 @@ let man = {
 
 let filteredStudent = man.Students.filter((m) => m.Age >=15)
 console.log(filteredStudent);
+
+```
+
+## Push()
+In JavaScript, you can add new values to an array using the push() method. The push() method adds one or more elements to the end of an array and returns the new length of the array.
+
+```javascript
+let myArray = [1, 2, 3];
+myArray.push(4);      // adds 4 to the end of the array
+myArray.push(5, 6);   // adds 5 and 6 to the end of the array
+console.log(myArray); // [1, 2, 3, 4, 5, 6]
+
+``` 
+
+
+## pop()
+```javascript
+
+```
+## unshift()
+In JavaScript, you can add a new element to the beginning of an array using the unshift() method. The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+```javascript
+let myArray = [2, 3, 4];
+myArray.unshift(1); // adds 1 to the beginning of the array
+console.log(myArray); // [1, 2, 3, 4]
+
+```
+## shift()
+```javascript
+
+```
+## splice()
+In JavaScript, you can add a new element at any position within an array using the splice() method. The splice() method allows you to add, remove, or replace elements in an array.
+
+The splice() method takes three arguments: the index at which to start adding elements, the number of elements to remove (if any), and the new element(s) to add. If you don't want to remove any elements, you can set the second argument to 0.
+
+Here's an example of how to use the splice() method to add a new element at a specific position within an array:
+```javascript
+let myArray = [1, 2, 4, 5];
+myArray.splice(2, 0, 3); // adds 3 at index 2
+console.log(myArray); // [1, 2, 3, 4, 5]
+
+```
+## slice()
+```javascript
+
+```
+## concat()
+```javascript
+
+```
+## join()
+```javascript
+
+```
+## reverse()
+```javascript
+
+```
+## sort()
+```javascript
 
 ```
