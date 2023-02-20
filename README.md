@@ -199,3 +199,115 @@ Whenever a function is called, the JavaScript engine creates a different type of
 ## Execution Stack
 
 Execution Stack, also known as "Call Stack" is a stack with a LIFO(Last In First Out) structure, which is used to store all the Execution context created during code execution. 
+
+![Execution context](https://res.cloudinary.com/practicaldev/image/fetch/s--q_xmB2U9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/01ksqw5twx22ilo4pibc.jpg)
+
+[How the execution context is created](https://blog.openreplay.com/explaining-javascript-s-execution-context-and-stack/)
+![Explaining JavaScript's Execution Context And Stack](https://blog.openreplay.com/images/explaining-javascript-s-execution-context-and-stack/images/mFQtgsb.png)
+
+
+
+## Hoisting
+
+- Before your **javascript(.js)** file run there is global execution context that is created even file is empty.Two phase Creation phase and Execution Phase.
+- In creation phase **GEC** create **global** object and **this.** In browser global object will be browser. Javascript engines allocate memory **for function** even before your code run.
+
+- After creation phase,There is Execution phase.
+
+```javascript
+sayHi() //hello
+function sayHi(){
+console.log("hello")
+}
+```
+Javascript already know your function even before it is executed
+because of hoisting as in creation phase it memorized all javascript function declaration.
+
+```javascript
+var a = 5;
+function Square(a){
+  return a * a;
+};
+var total = Square(a);
+```
+
+![Memory creation phase](https://res.cloudinary.com/practicaldev/image/fetch/s--ui49CrOn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yzxhzch70awih1zbamdg.png)
+![Momory creation phase 2](https://res.cloudinary.com/practicaldev/image/fetch/s--fl0SW7XU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/atd7r5yx8cgme6epngoe.png)
+
+### Ground Rules of Hoisting
+Hoisting only works for function declarations, **not expressions.** Here is an example of a function expression where the code execution will break.
+```javascript
+getAge(1990); 
+var getAge = function (yearOfBirth) {
+console.log(new Date().getFullYear - yearOfBirth) 
+};
+```
+
+![getage](https://www.freecodecamp.org/news/content/images/2022/08/getAge-error.png)
+
+.
+
+In JavaScript, initializations are not hoisted. 
+```javascript
+// program to display value
+console.log(a);
+var a = 5;
+```
+Output
+```javascript
+undefined
+```
+
+.
+
+Also, variable hoisting does not work for variables initialized with the **`let`** or **`const`** keyword. Trying to access a variable ahead of declaration and use the let and const keywords to declare it later will result in a **ReferenceError.**
+
+```javascript
+// using test before declaring
+console.log(name1);
+```
+
+![Hoiste](https://www.freecodecamp.org/news/content/images/2022/08/name-not-defined-error.png)
+
+.
+
+
+Also, when the variable is used inside the function, the variable is hoisted only to the top of the function. For example,
+```javascript
+// program to display value
+var a = 4;
+
+function greet() {
+    b = 'hello';
+    console.log(b); // hello
+    var b;
+}
+
+greet(); // hello
+console.log(b);
+```
+Output
+```javascript
+hello
+Uncaught ReferenceError: b is not defined
+```
+
+If a variable is used with the let keyword, that variable is not hoisted. For example,
+
+
+```javascript
+// program to display value
+console.log(num)
+
+let num;
+```
+Output
+```javascript
+Uncaught ReferenceError: Cannot access 'a' before initialization
+```
+![rferenceError](https://bobbyhadz.com/images/blog/javascript-referenceerror-cannot-access-before-initialization/referenceerror-cannot-access-before-initialization.webp)
+
+
+
+### Temporal Dead Zone
+Temporal Dead Zone is **the period of time during which the `let` and `const` declarations cannot be accessed.**
