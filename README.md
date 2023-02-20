@@ -208,6 +208,8 @@ Execution Stack, also known as "Call Stack" is a stack with a LIFO(Last In First
 
 
 ## Hoisting
+JavaScript **`Hoisting`** refers to the process whereby the interpreter appears to **move the declaration of functions, variables or classes to the top of their scope,** prior to execution of the code.
+
 
 - Before your **javascript(.js)** file run there is global execution context that is created even file is empty.Two phase Creation phase and Execution Phase.
 - In creation phase **GEC** create **global** object and **this.** In browser global object will be browser. Javascript engines allocate memory **for function** even before your code run.
