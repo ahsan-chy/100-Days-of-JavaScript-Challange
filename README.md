@@ -309,7 +309,90 @@ Uncaught ReferenceError: Cannot access 'a' before initialization
 ```
 ![rferenceError](https://bobbyhadz.com/images/blog/javascript-referenceerror-cannot-access-before-initialization/referenceerror-cannot-access-before-initialization.webp)
 
+.
+
+![Error in javascript](https://www.tutsmake.com/wp-content/uploads/2020/05/Types-of-Errors-In-JavaScript.jpeg)
+
+### 1. Reference Error:
+In essence, a **Reference Error** occurs when JavaScript 
+- tries to access a variable that doesn't exist, 
+- hasn't been defined, or 
+- doesn't exist in the current scope from which you are trying to access it.
+
+##### Accessing of a Variable Before its Declaration
+```javascript
+ console.log(a);
+    let a = "apple";
+    // ReferenceError: Cannot access 'a' before initialization
+```
+##### Wrong Scope
+```javascript
+ function inScope() {
+      let a = "apple";
+    }
+    console.log(a); 
+    // ReferenceError a is not defined.
+```
+##### Undeclared or Undefined Variable
+```javascript
+console.log(a)
+    // ReferenceError a is not defined.
+```
+
+##### Strict Mode (Silent Errors)
+```javascript
+  a = 'apple'
+    console.log(a)
+    // apple,
+```
+
+In strict mode, though, JavaScript will catch this error and throw a reference error:
+```javascript
+ "use strict";
+    a = "apple";
+    console.log(a);
+    // ReferenceError: a is not defined
+```
+### 2. Syntax Error:
+Syntax errors, also known as parse errors, occur in JavaScript when developers incorrectly use a predefined structure or language pattern.
+
+```javascript
+const b; // uncaught Syntax Error: 
+```
+```javascript
+let a = 100
+let a = 200 // uncaught Syntax Error: 
+```
+
+Lots of Syntax errors occure in JS. You will see those in your JS journy.
+
+### 3. Type Error:
+An operand or argument passed to a function is incompatible with the type expected by that operator or function🙄
+
+
+```javascript
+CONST  b= 100;
+b = 200; //uncaught TypeError: Assignment to consonent variable🙄
+```
+
+```javascript
+// type error
+    var a="nemani";
+     console.log(a.reverse());
+```
+
+
+![Errors types](https://cdn2.hexlet.io/store/derivatives/original/fa4dd03bd4b19ceb6a848d4307162257.png)
 
 
 ### Temporal Dead Zone
 Temporal Dead Zone is **the period of time during which the `let` and `const` declarations cannot be accessed.**
+
+```javascript
+let totalPrice = coursePrice * 1.18;    //---------
+                                         //         | ------>  this is TDZ for coursePrice
+                                         //         |
+console.log(totalPrice);                 //---------
+
+let coursePrice = 699;
+```
