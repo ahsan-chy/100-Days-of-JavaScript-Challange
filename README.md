@@ -22,6 +22,30 @@ Follow me: [ahsan-chy](https://www.github.com/ahsan-chy) for more JS Topics upda
 - [Playcode](https://playcode.io/)
 
 
+
+## Table of Content 
+- Data Types of JAvaScript
+- How javascript work???? 👩‍💻
+- 🚀 Execution Context
+    - ⚡️ Global Execution Context (GEC)
+    - ⚡️Function Execution Context (FEC)
+- Execution Stack
+- Hoisting
+- Ground Rules of Hoisting
+- Type of Errors
+    - Reference Error:
+    - Syntax Error:
+    - Type Error:
+- Temporal Dead Zone
+- Clousers 
+    - Lexical sope
+    - Variable Scope
+    - Scope Chain
+    - Garbadge Collecctor
+- Event Loops
+- 
+- 
+
 ## JavaScript Variables
 Variable is just like container (storage area) to hold data. 
 
@@ -396,3 +420,174 @@ console.log(totalPrice);                 //---------
 
 let coursePrice = 699;
 ```
+
+## Clousers 
+
+- Clousers 
+- Lexical sope - Dynamic Scope
+- Variable Scope
+- Scope Chain
+- Garbadge Collecctor
+- Curring 
+
+
+Closure is a feature that allows a function to access variables from an outer function, even after the outer function has returned. This is possible because the inner function retains a reference to the environment in which it was created, including any variables or functions that were defined in that environment.
+
+
+Javascript is the **synchronous single-threaded language** but with the help of **event-loop** and **promises**, JavaScript is used to do asynchronous programming.
+
+
+```javascript
+function outerFunction() {
+  var outerVariable = "Hello, ";
+
+  function innerFunction(name) {
+    console.log(outerVariable + name);
+  }
+
+  return innerFunction;
+}
+
+var greeting = outerFunction();
+greeting("John"); // Output: "Hello, John"
+```
+
+
+### garbage collector js
+Some high-level languages, such as **JavaScript,** utilize a form of automatic memory management known as **garbage collection (GC).** The purpose of a garbage collector is to monitor memory allocation and determine when a block of allocated memory is no longer needed and reclaim it.
+
+
+
+### Variable Scope
+
+- Global Scope:
+- Function Scope or Local Scope:
+- Block Scope
+
+![Scopes](https://scaler.com/topics/images/types-of-scopes.webp)
+
+![scope](https://cdn.hashnode.com/res/hashnode/image/upload/v1600864549731/CPpg9u2gi.png)
+
+![Variable scope](https://res.cloudinary.com/practicaldev/image/fetch/s--lI9XvHjf--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/vJhg635/Scope.png)
+
+![Variable Scope](https://miro.medium.com/max/1400/1*TblJQp4DJ6XmVzHJ5X6Zmw.png)
+
+### Lexical scope
+
+A **closure** in JavaScript is a feature where an inner function has access to the outer (enclosing) function's variables — a scope chain. Closures in Javascript are created along with the function. **Lexical scoping is the environment that holds the variables of the current scope as well as the outer scope.**
+
+
+### Scope Chain
+Scope Chain means that one variable has a **scope (it may be global or local/function or block scope) is used by another variable or function having another scope (may be global or local/function or block scope).** This complete chain formation goes on and stops when the user wishes to stop it according to the requirement.
+
+```javascript
+var x = 1; // Global scope
+
+function outer() {
+  var y = 2; // Outer scope
+
+  function inner() {
+    var z = 3; // Inner scope
+    console.log(x + y + z); // Output: 6
+  }
+
+  inner();
+}
+
+outer();
+
+```
+
+![ScopeChain](https://www.freecodecamp.org/news/content/images/2022/02/scope-chain.png)
+
+![Scops](https://www.learnsimpli.com/wp-content/uploads/2020/02/2-4.png)
+
+Each time a new function is created in JavaScript, a new local scope is created for that function. This local scope is added to the scope chain and becomes the next outer scope for any nested functions.
+
+### Curring Function
+
+Currying in JavaScript transforms a **function with multiple arguments into a nested series of functions, each taking a single argument.** 
+
+[Reference Video](https://youtu.be/EdUrAng1Q1k)
+
+[Technical Sunaja Video Link](https://youtu.be/DkBcfYtBZnQ)
+
+[Road side coder](https://youtu.be/k5TC9i5HonI)
+
+```javascript
+const add = (a, b, c)=>{
+    return a+ b + c
+}
+console.log(add(2, 3, 5)) // 10
+
+// Curried version
+const addCurry =(a) => {
+    return (b)=>{
+        return (c)=>{
+            return a+b+c
+        }
+    }
+}
+console.log(addCurry(2)(3)(5)) // 10
+```
+
+Why We use Curring:
+
+- Currying helps you avoid passing the same variable multiple times
+- Make higher order function
+
+![Curring](https://i0.wp.com/learnersbucket.com/wp-content/uploads/2021/06/Currying-in-Javascript-1.png?fit=768%2C500&ssl=1)
+
+
+
+
+## Event Loop
+
+In JavaScript, the event loop is a mechanism that handles asynchronous operations. It is an essential part of the language's concurrency model, which allows the program to perform multiple tasks concurrently without blocking the execution of other code.
+
+
+In JavaScript, the event loop is responsible for handling several types of asynchronous operations, including:
+
+**Timers:**  JavaScript provides two types of timers, setInterval() and setTimeout(), which allow the programmer to schedule code to run after a certain amount of time has passed.
+
+**User Interface (UI) events:** These are events that are triggered by user interaction with the page, such as mouse clicks, keypresses, and form submissions.
+
+**Network requests:** JavaScript code can send HTTP requests to servers to retrieve data. Since network requests can take a long time to complete, they are typically handled asynchronously to avoid blocking the program's execution.
+
+**File I/O operations:** JavaScript can read and write files from the local file system. These operations can take a significant amount of time, so they are usually performed asynchronously.
+
+**Promises:** Promises are a mechanism for handling asynchronous operations in JavaScript. They represent a value that may not be available yet, but will be at some point in the future. When the value is available, the promise is fulfilled, and the associated code can be executed.
+
+```javascript
+console.log("Starting...");
+
+setTimeout(function() {
+  console.log("Timer done!");
+}, 2000);
+
+console.log("Waiting for timer...");
+
+```
+Output:
+```javascript
+Starting...
+Waiting for timer...
+Timer done!
+```
+#### [Detail Article](https://www.javascripttutorial.net/javascript-event-loop/)
+
+![EventLoop](https://miro.medium.com/max/672/1*SNu8b0NKs9cBB9JsvNXKcA.png)
+
+![EventLoop](https://miro.medium.com/max/1400/1*LvbUhFpMUeN9xoaazrp_gQ.jpeg)
+
+![Event Loop](https://i.ibb.co/nbQc6sk/Javascript-event-loop.png)
+
+![EventLoop](https://scaler.com/topics/images/event-loop-javascript.webp)
+
+
+![Web Apis](https://user-images.githubusercontent.com/85479513/221345755-331450d0-acbc-49d3-89ea-64eff8087ef8.png)
+
+![Event Loop](https://user-images.githubusercontent.com/85479513/221345784-9d74770f-6f8d-4b75-8927-26856c4f9d84.png)
+
+
+
