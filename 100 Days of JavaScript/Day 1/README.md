@@ -1,5 +1,5 @@
 
-# 100 Days of JavaScript Challange
+# Day 1: 
 
 
 ## 💡Day 1:  JavaScript Find Largest & Smallest Element in Array.

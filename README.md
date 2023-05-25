@@ -43,6 +43,11 @@ Follow me: [ahsan-chy](https://www.github.com/ahsan-chy) for more JS Topics upda
     - Scope Chain
     - Garbadge Collecctor
 - Event Loops
+
+Other relevant Topics 
+- Call - Apply - Bind
+- Curring 
+- Memoization 
 - 
 - 
 
@@ -575,6 +580,12 @@ Waiting for timer...
 Timer done!
 ```
 #### [Detail Article](https://www.javascripttutorial.net/javascript-event-loop/)
+
+
+
+![settimeout](https://static.wixstatic.com/media/0f65e1_a50ce7f9ceec402e82e63c6ccddc40a4~mv2.gif)
+
+#### [JS Event LOOP](https://www.thetechplatform.com/post/the-javascript-event-loop-explained)
 
 ![EventLoop](https://miro.medium.com/max/672/1*SNu8b0NKs9cBB9JsvNXKcA.png)
 
