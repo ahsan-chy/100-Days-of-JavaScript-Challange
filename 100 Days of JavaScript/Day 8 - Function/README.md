@@ -16,6 +16,8 @@ Difference b/w Arrow and Regular Function
 - **this** value in Regular Function & Arrow Function
 - **return** in Regular Function & Arrow Function
 
+[Detail Difference b/w Arrow and Regular Function](https://medium.com/geekculture/regular-vs-arrow-function-1f8140fbcece)
+
 ## Regular Function - Function Declaration
 
 ```javascript
