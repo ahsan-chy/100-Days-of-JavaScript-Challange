@@ -5,9 +5,6 @@ const user = {
         name: 'Ali',
         age: 23
     },
-//    fun: () => {
-//         console.log(age)
-//     }
 }
 
 // const userdeep = {...user};

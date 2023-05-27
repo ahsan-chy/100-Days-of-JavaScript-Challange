@@ -19,14 +19,27 @@ Table of Content:
 ## ECMA Script 6 - ES 6 
 European Computer Manufacturers Association Script
 
-## Deep Copy
+- let and const
+- Arrow functions
+- Template literals
+- Destructuring assignment
+- Default function parameters
+- ...Rest and ...spread operators
+- The For/Of Loop
+- JavaScript Maps
+- JavaScript Sets
+- Modules   ```javascript import { component } from './module1.js';```
 
- ![deep copy](https://github.com/ahsan-chy/100-Days-of-JavaScript-Challange/assets/85479513/f7e6202b-6e80-4029-a2d7-5fb15ae17c5e)
-
+[W3School Detail list of ES6 Changes](https://www.w3schools.com/js/js_es6.asp)
 
 ## Shallow Copy
 
 ![shallow copy](https://github.com/ahsan-chy/100-Days-of-JavaScript-Challange/assets/85479513/57f9a0b7-b13e-47d3-91bf-316262b2ee9a)
+
+## Deep Copy
+
+ ![deep copy](https://github.com/ahsan-chy/100-Days-of-JavaScript-Challange/assets/85479513/f7e6202b-6e80-4029-a2d7-5fb15ae17c5e)
+
 
 
 ## Array Destructuring
@@ -204,8 +217,92 @@ console.log(mergedUsers)
 ```
 
 
-## Call by Reference 
+## Pass by Reference 
+
+Pass by Reference, Function is called by directly passing the reference/address of the variable as an argument. So changing the value inside the function also change the original value. In **JavaScript array and Object** follows **pass by reference** property.
+
+
+```javascript
+let person = {
+    name: 'John',
+    age: 25,
+};
+  
+  function increaseAge(obj) {
+    obj.age += 1;
+  }
+  
+  increaseAge(person);   // copy reference
+  
+  console.log(person);  // { name: 'John', age: 26 }
+```
+
+
+```javascript
+const user = {
+    name: "Anonymous",
+    age: 21
+}
+
+const user2 = user;   // copy reference
+user2.name = "Husain";
+
+console.log(user)   // { name: 'Husain', age: 21 }
+console.log(user2)  // { name: 'Husain', age: 21 }
+```
+
+
+![copy by reference and copy by value](https://github.com/ahsan-chy/100-Days-of-JavaScript-Challange/assets/85479513/4f951f1c-5d20-48f6-ab20-a459dc8d6cc1)
 
 
 
-## Call by value
+## Pass by Value 
+
+Pass by value, function is called by directly passing the value of the variable as an argument. So any changes made inside the function does not affect the original value.
+
+
+```javascript
+function square(x) {
+    x = x * x;
+    return x;
+}
+
+let y = 10;
+let result = square(y);     //copy values
+
+console.log(result); // 100 
+console.log(y); // 10 -- no change
+```
+
+
+```javascript
+const employ = {
+    name: "Anonymous",
+    age: 21,
+}
+
+const employ2 = {...employ};    // copy values
+
+employ2.name = "Khan";
+
+console.log(employ);    // { name: 'Anonymous', age: 21 }
+console.log(employ2);   // { name: 'khan', age: 21 }
+```
+
+#### Tricky Example
+```javascript
+let a = [1,2];
+let b = a;
+
+//Copy address of a
+console.log(a == b)     //true
+console.log(a === b)    //true
+
+let i = [1,2];
+let j = [1,2];
+
+//Both have same values but different addresses
+console.log(i == j)     //false
+console.log(i === j)    //false
+```
+
