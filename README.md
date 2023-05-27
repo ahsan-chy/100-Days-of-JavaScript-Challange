@@ -45,7 +45,6 @@ Follow me: [ahsan-chy](https://www.github.com/ahsan-chy) for more JS Topics upda
 - Event Loops
 
 Other relevant Topics 
-- Call - Apply - Bind
 - Curring 
 - Memoization 
 - 
