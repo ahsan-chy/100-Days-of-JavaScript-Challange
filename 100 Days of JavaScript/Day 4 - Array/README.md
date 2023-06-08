@@ -29,6 +29,16 @@ Some Other Methods in Array
 
 ## Find
 
+- The **find()** method returns the value of the first element that passes a test.
+
+- The **find()** method executes a function for each array element.
+
+- The **find()** method returns **undefined** if no elements are found.
+
+- The **find()** method does not execute the function for empty elements.
+
+- The **find()** method does not change the original array.
+- 
 
 // ---- Method 1 ----//
 ```javascript
@@ -70,6 +80,8 @@ console.log(bigNumbers);
 [Video Refference Link](https://www.youtube.com/watch?v=jz8Vo6Df57c&list=TLPQMDEwMTIwMjPOXvynotCRtA&index=5)
 
 ## FindIndex
+
+The **index of** the first element that passes the test, Otherwise **-1**.
 
 ```javascript
 let score2 = [10,20,5,10,50,91,10,7,9,45];
@@ -119,6 +131,7 @@ const Season = [
 
 
 ## indexOf
+The **indexOf** method is used to find the first occurrence of a specified value within a string or an array. It returns the index of the first occurrence or -1 if the value is not found.
 
 // ---- Method 2 ----//
 ```javascript
