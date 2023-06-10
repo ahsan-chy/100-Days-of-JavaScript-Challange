@@ -47,7 +47,8 @@ Follow me: [ahsan-chy](https://www.github.com/ahsan-chy) for more JS Topics upda
 Other relevant Topics 
 - Curring 
 - Memoization 
-- 
+- Denouncing 
+- Throatling
 - 
 
 ## JavaScript Variables
@@ -542,6 +543,44 @@ Why We use Curring:
 
 ![Curring](https://i0.wp.com/learnersbucket.com/wp-content/uploads/2021/06/Currying-in-Javascript-1.png?fit=768%2C500&ssl=1)
 
+
+## Memoization
+
+Memoization is a technique used in computer programming to optimize the performance of functions by caching their results. It involves storing the results of expensive function calls and retrieving them from a cache when the same inputs are encountered again.
+
+The idea behind memoization is that if a function is called with the same arguments multiple times, it's more efficient to compute the result once and store it for future use, rather than recomputing it every time. This can significantly improve the performance of algorithms that have overlapping subproblems or repetitive computations.
+
+Here is an example of how memoization can be used to speed up a recursive function:
+
+```javascript
+function factorial(n):
+  if n == 0:
+    return 1
+  else:
+    return n * factorial(n - 1)
+```
+This function is recursive, and it calls itself n times when n is greater than 0. This can make the function very slow for large values of n.
+
+```javascript
+const memo = {};
+
+function factorialMemoized(n) {
+  if (n in memo) {
+    return memo[n];
+  } 
+else {
+    const result = n * factorialMemoized(n - 1);
+    memo[n] = result;
+    return result;
+  }
+```
+This code uses a hash table to store the results of factorial calls. When factorial is called, the hash table is checked to see if the nth factorial has already been computed. If it has, the result is returned from the hash table. If not, the factorial is computed and stored in the hash table.
+
+![Memoization](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJjS_2lynApf4NTzE6pPQmgQSLVrU4FBUFXQ&usqp=CAU)
+
+This code can significantly speed up the factorial function. For example, factorial(100) takes about 100 milliseconds to compute without memoization, but it takes only about 1 millisecond to compute with memoization.
+
+![fab recursion](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTThztkp6clLr9H16wEbhl9hA_Q5KDgYidBQ&usqp=CAU)
 
 
 
