@@ -5,6 +5,7 @@
 
 - If Condition (&&)
 - != , !==
+- !!double negation
 - Data.length !==0 
 - Nullish Operator (??)
 - Optional chaining (?.)
@@ -13,6 +14,22 @@
 - Ternory Operator - Nested Ternory Operator
 - Check Whether condition Fullfill or Not 
 - 
+
+
+
+### !!double negation
+Double exclamation mark (!!) is a shorthand way to convert a value to its corresponding boolean equivalent.
+
+1. The first exclamation mark (!) is the logical NOT operator. It negates the truthiness of a value. If the operand is truthy, ! makes it false. If the operand is falsy, ! makes it true.
+
+2. The second exclamation mark (!) is used again, effectively negating the previous negation. This results in the original truthiness or falsiness of the value.
+
+```javascript
+let value = "Hello";
+let booleanValue = !!value;
+
+console.log(booleanValue); // true
+```
 
 
 ### Null Collision **??** - Optional Channing **?.** 
