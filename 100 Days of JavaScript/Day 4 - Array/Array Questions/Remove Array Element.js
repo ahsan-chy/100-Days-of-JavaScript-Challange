@@ -26,7 +26,7 @@
 
 // const num = 50;
 
-// // const result = scores.filter((score) => score != num);   //+ Callback inside the filter. You can pass this outside the filter.
+// const result = scores.filter((score) => score != num);   //+ Callback inside the filter. You can pass this outside the filter.
 // const result = scores.filter(function (value, index, arr) {
 //   return value != num;
 // });
@@ -39,7 +39,7 @@
 
 // console.log("Orignal Scores", scores);
 
-// // scores.splice(0, 3)     //+ Delete 3 Elements starting from index 0
+// scores.splice(0, 3)     //+ Delete 3 Elements starting from index 0
 
 // // + Using splice method Delete the element which match the given condition
 // for (let i = 0; i < scores.length; i++) {

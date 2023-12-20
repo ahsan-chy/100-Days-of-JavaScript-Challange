@@ -8,6 +8,12 @@ Table of Problems
   - Remove using Filter Method
   - Remove using Splice Method
   - Remove using For Loop
+- Remove Dublicate from array
+  - Remove using Set method
+  - Remove using Filter Method
+  - Remove using Reduce Method
+  - Remove using forEach
+  -
 
 #### Remove First Element from Array
 
@@ -21,6 +27,8 @@ scores.shift();
 console.log("First Delete & Scores is ", scores);
 ```
 
+**Time Complexity**: O(n)
+
 #### Remove Last Element from Array
 
 ```javascript
@@ -32,6 +40,8 @@ scores.pop();
 
 console.log("Last Delete & Scores is ", scores);
 ```
+
+**Time Complexity**: O(n)
 
 #### Remove using Filter Method
 
@@ -50,6 +60,8 @@ const result = scores.filter(function (value, index, arr) {
 console.log("Last Delete & Scores is ", result);
 ```
 
+**Time Complexity**: O(n)
+
 #### Remove using Splice Method
 
 ```javascript
@@ -67,6 +79,8 @@ for (let i = 0; i < scores.length; i++) {
 }
 console.log("Last Delete & Scores is ", scores);
 ```
+
+**Time Complexity**: O(n<sup>2</sup>)
 
 #### Remove using For Loop
 
@@ -90,3 +104,92 @@ const removeElement = () => {
 
 console.log("Last Delete & Scores is ", removeElement());
 ```
+
+**Time Complexity**: O(n)
+
+---
+
+#### Remove using Set method
+
+```javascript
+const classes = [1, 3, 4, 4, 15, 15, 6, 6];
+
+console.log("Original Array", classes);
+
+const uniqueArray = [...new Set(classes)];
+
+console.log(uniqueArray);
+```
+
+**Time Complexity**: O(n)
+
+#### Remove using Filter Method
+
+```javascript
+const classes = [1, 3, 4, 4, 15, 15, 6, 6];
+
+console.log("Original Array", classes);
+
+const uniqueArray = classes.filter((value, index, self) => self.indexOf(value) === index);
+
+console.log(uniqueArray);
+```
+
+**Time Complexity**: O(n<sup>2</sup>)
+
+#### Remove using Reduce Method
+
+- First Example:
+
+```javascript
+let age = [18, 21, 1, 1, 51, 18, 21, 5, 18, 7, 10];
+
+console.log("orignal Age", age);
+
+let uniqueAge = age.reduce((acc, curr) => {
+  if (acc.indexOf(curr) === -1) {
+    acc.push(curr);
+  }
+  return acc;
+}, []);
+
+console.log(uniqueAge);
+```
+
+- Second Example
+
+```javascript
+const classes = [1, 3, 4, 4, 15, 15, 6, 6];
+
+console.log("Original Array", classes);
+
+const uniqueArray = classes.reduce((accumulator, currentValue) => {
+  if (!accumulator.includes(currentValue)) {
+    accumulator.push(currentValue);
+  }
+  return accumulator;
+}, []);
+
+console.log(uniqueArray);
+```
+
+**Time Complexity**: O(n<sup>2</sup>)
+
+#### Remove using forEach
+
+```javascript
+const array = [18, 21, 1, 1, 51, 18, 21, 5, 18, 7, 10];
+
+console.log("orignal Array", array);
+
+const uniqueArray = [];
+array.forEach((value) => {
+  if (!uniqueArray.includes(value)) {
+    uniqueArray.push(value);
+  }
+});
+
+console.log(uniqueArray);
+```
+
+**Time Complexity**: O(n<sup>2</sup>)
