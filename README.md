@@ -540,13 +540,150 @@ Why We use Curring:
 
 ![Curring](https://i0.wp.com/learnersbucket.com/wp-content/uploads/2021/06/Currying-in-Javascript-1.png?fit=768%2C500&ssl=1)
 
-### Event Bubbling
+
+### Event Propagation
+
+- There are three phases of event propagation:
+  1. Capture Phase,
+  2. Target Phase,
+  3. Bubble Phase
+
+Event Propagation concepts:
 
 - Event Bubbling
 - Event Capturing
-- Stop Propagation
-- Imidiate propagation
-- Prevent Default
+- Accessing the Target Element
+- Event Propagation - StopPropagation
+- Event Cancellation
+- PreventDefault
+- Immidiate propagation
+
+#### Event Propagation
+
+- The concept of event propagation describes how events propagate through the DOM tree to reach their destination and what happens to them once they do.
+
+[Detail Article About Event Propagation](https://medium.com/@nusrat35/a-deep-dive-into-the-event-propagation-advanced-concept-of-javascript-63a906e389a)
+
+![EventBubbleCapture](./assets/images/bubbling%20capturing.png)
+
+[Video Link](https://youtu.be/nwDQS7eLtQs?list=TLPQMTgwMjIwMjQoQAdyVtpROA)
+
+#### Event bubbling
+
+- Event Bubbling is a concept in the DOM (Document Object Model). It happens when an element receives an event, and that **event bubbles up** (or you can say is transmitted or propagated) **to its parent and ancestor elements** in the DOM tree until it gets to the root element.
+
+![Bubbling](./assets//images/JavaScript-event-bubbling.png)
+
+**Important points about event bubbling**:
+
+- It only work if both inner and outer div/button have same events. Like child have onClick and parent have onClick then it will work. Otherwise it will not work.(One have click and other have hover event.)
+
+Example:
+
+```javascript
+<div id="outer">
+  <div id="middle">
+    <div id="inner">Click me</div>
+  </div>
+</div>
+```
+
+```javascript
+const outer = document.getElementById("outer");
+const middle = document.getElementById("middle");
+const inner = document.getElementById("inner");
+
+// Event bubbling
+outer.addEventListener("click", () => console.log("Outer clicked"));
+middle.addEventListener("click", () => console.log("Middle clicked"));
+inner.addEventListener("click", () => console.log("Inner clicked"));
+```
+
+#### Event Capturing
+
+- The event is first captured by the outermost ancestor element (usually the root element), and then it traverses down the DOM hierarchy, passing through each descendant element down to the target element where the event originated.
+- For the capturing phase, we need to set the handler capture option of **addEventListener()** to **true**.
+
+![Capture](./assets//images/JavaScript-event-capturing.png)
+
+Example:
+
+```javascript
+<div id="outer">
+  <div id="middle">
+    <div id="inner">Click me</div>
+  </div>
+</div>
+```
+
+```javascript
+const outer = document.getElementById("outer");
+const middle = document.getElementById("middle");
+const inner = document.getElementById("inner");
+
+// Event capturing
+outer.addEventListener("click", () => console.log("Outer capturing"), true);
+middle.addEventListener("click", () => console.log("Middle capturing"), true);
+inner.addEventListener("click", () => console.log("Inner capturing"), true);
+```
+
+#### stopPropagation():
+
+- StopPropagation method to stop the flow of an event through the DOM tree, but does not cancel the browser default behavior.
+
+- stops the upward movement
+
+- There are two techniques to stop the propagation: event.stopPropagation()
+  as well as event.stopImmediatePropagation() .
+
+```javascript
+function topDiv() {
+  alert("topDiv");
+
+  function middleDiv() {
+    event.stopPropagation(); //+ stopPropagation
+    alert("middleDiv");
+
+    function innerdiv() {
+      event.stopPropagation(); //+ stopPropagation
+      alert("innerdiv");
+    }
+  }
+}
+```
+
+This time when I click on inner div it will call on inner don't move to upward.
+
+#### preventDefault() - Event Cancellation:
+
+- PreventDefault method to prevent the default behavior of an event, but does not stop the event flow.
+
+**Example 1:**
+
+```javascript
+<a href="https://www.example.com" id="link">
+  Click me
+</a>
+```
+
+```javascript
+const link = document.getElementById('link');
+
+link.addEventListener('click', function(event) {
+  // Prevent the default behavior of the link (navigating to the href URL)
+  event.preventDefault();
+
+  // Log a message to the console
+  console.log('Link clicked, but default action prevented.');
+});
+```
+
+- In this example, when you click on the link, the **default behavior** of the link (navigating to the URL specified in the href attribute) is prevented using event.preventDefault(). Instead, a message is logged to the console.
+
+- So, even though the link is clicked, the **browser doesn't navigate to the URL specified in the href attribute** because event.preventDefault() stops the default action associated with the event.
+
+**Example 2:**
+- Form Submition
 
 ### Debouncing
 
@@ -761,3 +898,7 @@ Timer done!
 ![Web Apis](https://user-images.githubusercontent.com/85479513/221345755-331450d0-acbc-49d3-89ea-64eff8087ef8.png)
 
 ![Event Loop](https://user-images.githubusercontent.com/85479513/221345784-9d74770f-6f8d-4b75-8927-26856c4f9d84.png)
+
+![25 JS Advance Concepts For interview](image.png)
+
+### [Javascript Interview Questions](https://www.linkedin.com/pulse/25-advanced-javascript-questions-javascript-code-a6gyc/)
