@@ -1,3 +1,10 @@
+# Different Tricky Interview Questions
+
+Table Of Questions 
+- Pass 1 return 2, Pass 2 return 1
+- Swap two variables 
+- 
+
 
 ### Question: 1
  

@@ -3,17 +3,24 @@
 Table of Problems
 
 - Remove Element from array
-  - Remove First Element from Array
-  - Remove Last Element from Array
-  - Remove using Filter Method
-  - Remove using Splice Method
-  - Remove using For Loop
+  - [Remove First Element from Array](#remove-first-element-from-array)
+  - [Remove Last Element from Array]()
+  - [Remove using Filter Method]()
+  - [Remove using Splice Method]()
+  - [Remove using For Loop]()
 - Remove Dublicate from array
-  - Remove using Set method
-  - Remove using Filter Method
-  - Remove using Reduce Method
-  - Remove using forEach
+  - [Remove using Set method]()
+  - [Remove using Filter Method]()
+  - [Remove using Reduce Method]()
+  - [Remove using forEach]()
   -
+- [Find Largest & Smallest Element in Array]()
+- [Find Second Largest Element in Array]()
+- [Object to Array Convert]() 
+- 
+
+
+
 
 #### Remove First Element from Array
 
@@ -193,3 +200,129 @@ console.log(uniqueArray);
 ```
 
 **Time Complexity**: O(n<sup>2</sup>)
+
+
+
+#### Find Largest Element in Array.
+
+```javascript
+  // Find Largest Element in Array
+function largest(score){
+    let largest = score[0];
+
+    for(let i=0; i<score.length; i++){
+      if(score[i] > largest){
+        largest = score[i]
+      }
+    }
+    return largest
+  }
+console.log(largest([11,23,31,5,67,42,96, 23,96,44]))
+// output: 96
+```
+
+#### Find Smallest Element in Array.
+
+```javascript
+  // Find Smallest Element in Array
+function smallest(score){
+    let smallest = score[0];
+
+    for(let i=0; i<score.length; i++){
+      if(score[i] < smallest){
+        smallest = score[i]
+      }
+    }
+    return smallest
+  }
+console.log(smallest([11,23,-31,5,67,42,96,-23,96,44]))
+// output: -31
+```
+
+#### Largest, Smallest Element in single function.
+
+```javascript
+  //Find Largest and Smallest in single Function
+function largestsmallest(score){
+    let largest = score[0];
+    let smallest = score[0];
+    
+    for(let i=0; i<score.length; i++){
+      if(score[i] < smallest){
+        smallest = score[i]
+      }
+      if(score[i] > largest){
+        largest = score[i]
+      }
+    }
+    // return [smallest, largest]
+    // or 
+      return {smallest, largest}
+  }
+  console.log(largestsmallest([11,23,31,5,67,42,96, 23,96,44]))
+  // {Smalles: 5, largest: 96}
+```
+
+
+#### Find Largest and Smallest using ES6 Spread Operator.
+
+```javascript
+  //Finding Largest and Smallest using ES6 Spread Operator
+function largestElement(score){
+    const max = Math.max(...score);
+    return max
+}
+function smallestElement(score){
+    const min = Math.min(...score);
+    return min
+}
+console.log(largestElement([11,23,31,5,6,23,6,-44]))   //31
+console.log(smallestElement([11,23,31,5,67,23,6,4]))   // 4
+
+```
+
+
+#### Find Second Largest Element in Array
+
+- **C++**
+
+```javascript
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int arr[] = {6, 4, 1, 2, 8, 5};
+	int max1 = arr[0], max2 = INT_MIN;
+	for(int i = 1; i < 6; i++) {
+		if(arr[i] > max1 ) {
+			max2 = max1;
+			max1 = arr[i];
+		} else if(arr[i] > max2) {
+			max2 = arr[i];
+		}
+		
+	}
+	cout << max2 << endl;
+	return 0;
+}
+```
+
+
+- **Javascript**
+
+```javascript
+let arr = [6, 4, 1, 2, 8, 5];
+let max1 = arr[0], max2 = -Infinity;
+for (let i = 1; i < 6; i++) {
+    if (arr[i] > max1) {
+        max2 = max1;
+        max1 = arr[i];
+    } else if (arr[i] > max2) {
+        max2 = arr[i];
+    }
+}
+console.log(max2);
+```
+
+
+

@@ -51,23 +51,22 @@
 
 // - Remove using For Loop
 
-// const scores = [20, 50, 30, 88, 73];
+const scores = [20, 50, 30, 88, 73];
 
-// console.log("Orignal Scores", scores);
+console.log("Orignal Scores", scores);
 
-// let delete_number = 30;
+let delete_number = 30;
+const removeElement = () => {
+  let newArray = [];
 
-// const removeElement = () => {
-//   let newArray = [];
+  for (let i = 0; i < scores.length; i++) {
+    if (scores[i] !== delete_number) {
+      newArray.push(scores[i]);
+    }
+  }
+  return newArray;
+};
 
-//   for (let i = 0; i < scores.length; i++) {
-//     if (scores[i] !== delete_number) {
-//       newArray.push(scores[i]);
-//     }
-//   }
-//   return newArray;
-// };
+console.log("Last Delete & Scores is ", removeElement());
 
-// console.log("Last Delete & Scores is ", removeElement());
-
-
+debugger;
