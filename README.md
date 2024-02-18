@@ -36,10 +36,17 @@ Follow me: [ahsan-chy](https://www.github.com/ahsan-chy) for more JS Topics upda
   - Scope Chain
   - Garbadge Collecctor
 - Event Loops
-
-Other relevant Topics
-
 - Curring
+- Event Delegation
+- Event Propagation
+  - Event Bubbling
+  - Event Capturing
+  - Accessing the Target Element
+  - Event Propagation - StopPropagation
+  - Event Cancellation
+  - PreventDefault
+  - Immidiate propagation
+
 - Memoization
 - Denouncing
 - Throatling
@@ -540,6 +547,10 @@ Why We use Curring:
 
 ![Curring](https://i0.wp.com/learnersbucket.com/wp-content/uploads/2021/06/Currying-in-Javascript-1.png?fit=768%2C500&ssl=1)
 
+### Event Delegation
+
+- 
+
 
 ### Event Propagation
 
@@ -688,7 +699,7 @@ link.addEventListener('click', function(event) {
 ### Debouncing
 
 [Debouncing Video](https://github.com/ahsan-chy/ahsan-chy/assets/85479513/e9ba9fc0-c779-4572-b744-78cb809e6ad6)
-![Debouncing](./debouncing.png)
+![Debouncing](./assets/images/debouncing.png)
 
 - Debouncing is a programming technique that helps to improve the performance of web applications by limiting the frequency of function calls.
 
@@ -899,6 +910,6 @@ Timer done!
 
 ![Event Loop](https://user-images.githubusercontent.com/85479513/221345784-9d74770f-6f8d-4b75-8927-26856c4f9d84.png)
 
-![25 JS Advance Concepts For interview](image.png)
+![25 JS Advance Concepts For interview](./assets/images/image.png)
 
 ### [Javascript Interview Questions](https://www.linkedin.com/pulse/25-advanced-javascript-questions-javascript-code-a6gyc/)
