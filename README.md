@@ -145,18 +145,17 @@ console.log(typeof JSON.parse(person), JSON.parse(person));
 
 # How javascript work???? 👩‍💻
 
-![Execution Context](https://miro.medium.com/max/1400/1*y8oX0ddZ8vXcOnRIM2yjzw.png)
+![execution-context](https://github.com/user-attachments/assets/365888b8-55ca-4be6-a505-245d9c60b275)
+![execution-context-3](https://github.com/user-attachments/assets/29fb0a9c-a502-4623-9dbb-6de36096f995)
+![execution-context-2](https://github.com/user-attachments/assets/4935bfd8-cba6-46c5-938d-ac96e262c76d)
 
-![Execution Context1](https://blog.openreplay.com/images/explaining-javascript-s-execution-context-and-stack/images/RPVavBq.png)
-
-![Execution Context](https://miro.medium.com/max/1400/0*dKwyj2wjGZ_ZJLxj.gif)
 
 ## 🚀 Execution Context
 
 - #### An environment where the Javascript code is Evaluated & Executed.
 - #### Execution context contains the code that's currently running and everything that aids in it execution.
 
-![Global Object](https://www.javascripttutorial.net/wp-content/uploads/2019/12/javascript-execution-context-global-execution-context-in-creation-phase.png)
+![javascript-execution-context-global-execution-context-in-creation-phase](https://github.com/user-attachments/assets/92b5fd4d-9a81-49b0-856e-1f230c59c412)
 
 When the JavaScript engine executes a script for the first time, it creates the **`global`** execution context. During this phase, the JavaScript engine performs the following tasks:
 
@@ -223,7 +222,8 @@ Execution Stack, also known as "Call Stack" is a stack with a LIFO(Last In First
 ![Execution context](https://res.cloudinary.com/practicaldev/image/fetch/s--q_xmB2U9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/01ksqw5twx22ilo4pibc.jpg)
 
 [How the execution context is created](https://blog.openreplay.com/explaining-javascript-s-execution-context-and-stack/)
-![Explaining JavaScript's Execution Context And Stack](https://blog.openreplay.com/images/explaining-javascript-s-execution-context-and-stack/images/mFQtgsb.png)
+![Explaining JavaScript's Execution Context And Stack](https://github.com/user-attachments/assets/861f828b-cbd8-4343-8784-1491d5ef9f93)
+
 
 ## Hoisting
 
@@ -252,8 +252,9 @@ function Square(a) {
 var total = Square(a);
 ```
 
-![Memory creation phase](https://res.cloudinary.com/practicaldev/image/fetch/s--ui49CrOn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yzxhzch70awih1zbamdg.png)
-![Momory creation phase 2](https://res.cloudinary.com/practicaldev/image/fetch/s--fl0SW7XU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/atd7r5yx8cgme6epngoe.png)
+![Memory creation phase](https://github.com/user-attachments/assets/00a92abf-943f-41a7-82e8-7c1c9685db46)
+![Memory creation phase2](https://github.com/user-attachments/assets/bf9a649b-030e-40d6-832c-e3e9d7c437da)
+
 
 ### Ground Rules of Hoisting
 
@@ -266,7 +267,8 @@ var getAge = function (yearOfBirth) {
 };
 ```
 
-![getage](https://www.freecodecamp.org/news/content/images/2022/08/getAge-error.png)
+![error](https://github.com/user-attachments/assets/3e0f28fc-6e2e-4e8d-abf9-c2a750679357)
+
 
 .
 
@@ -293,7 +295,7 @@ Also, variable hoisting does not work for variables initialized with the **`let`
 console.log(name1);
 ```
 
-![Hoiste](https://www.freecodecamp.org/news/content/images/2022/08/name-not-defined-error.png)
+![image](https://github.com/user-attachments/assets/c947a81b-ba18-447c-87cd-60019ad6b0b2)
 
 .
 
@@ -335,11 +337,12 @@ Output
 Uncaught ReferenceError: Cannot access 'a' before initialization
 ```
 
-![rferenceError](https://bobbyhadz.com/images/blog/javascript-referenceerror-cannot-access-before-initialization/referenceerror-cannot-access-before-initialization.webp)
+![rferenceError](https://github.com/user-attachments/assets/0f05dd4d-fb24-46f5-9490-03a05aa796e7)
 
 .
 
-![Error in javascript](https://www.tutsmake.com/wp-content/uploads/2020/05/Types-of-Errors-In-JavaScript.jpeg)
+![Error in javascript](https://github.com/user-attachments/assets/519e0188-565a-4944-968e-f29a71963844)
+
 
 ### 1. Reference Error:
 
@@ -474,13 +477,14 @@ Some high-level languages, such as **JavaScript,** utilize a form of automatic m
 - Function Scope or Local Scope:
 - Block Scope
 
-![Scopes](https://scaler.com/topics/images/types-of-scopes.webp)
+![Scopes](https://github.com/user-attachments/assets/26f24fd1-83c4-4d47-9025-a25d79c388f1)
 
-![scope](https://cdn.hashnode.com/res/hashnode/image/upload/v1600864549731/CPpg9u2gi.png)
+![scope](https://github.com/user-attachments/assets/92c4712d-f60e-4be7-9115-23ec6fe2ab33)
 
-![Variable scope](https://res.cloudinary.com/practicaldev/image/fetch/s--lI9XvHjf--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/vJhg635/Scope.png)
+![Variable scope](https://github.com/user-attachments/assets/b88b8136-231a-410e-a1aa-3807ca18359f)
 
-![Variable Scope](https://miro.medium.com/max/1400/1*TblJQp4DJ6XmVzHJ5X6Zmw.png)
+![Variable Scope](https://github.com/user-attachments/assets/5b9220fc-7060-44d7-9a6e-911e3d5fa2dc)
+
 
 ### Lexical scope
 
@@ -506,10 +510,10 @@ function outer() {
 
 outer();
 ```
+![ScopeChain](https://github.com/user-attachments/assets/0f09a36a-e6aa-4029-8180-05a3ec1b5e92)
 
-![ScopeChain](https://www.freecodecamp.org/news/content/images/2022/02/scope-chain.png)
+![Scops](https://github.com/user-attachments/assets/8589003e-0142-47b8-819f-f2996c758ba1)
 
-![Scops](https://www.learnsimpli.com/wp-content/uploads/2020/02/2-4.png)
 
 Each time a new function is created in JavaScript, a new local scope is created for that function. This local scope is added to the scope chain and becomes the next outer scope for any nested functions.
 
@@ -545,7 +549,7 @@ Why We use Curring:
 - Currying helps you avoid passing the same variable multiple times
 - Make higher order function
 
-![Curring](https://i0.wp.com/learnersbucket.com/wp-content/uploads/2021/06/Currying-in-Javascript-1.png?fit=768%2C500&ssl=1)
+![Curring](https://github.com/user-attachments/assets/0d0a2344-48bd-40dc-a969-8023f47c8f25)
 
 ### Event Delegation
 
@@ -852,11 +856,15 @@ else {
 
 This code uses a hash table to store the results of factorial calls. When factorial is called, the hash table is checked to see if the nth factorial has already been computed. If it has, the result is returned from the hash table. If not, the factorial is computed and stored in the hash table.
 
-![Memoization](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJjS_2lynApf4NTzE6pPQmgQSLVrU4FBUFXQ&usqp=CAU)
+
+![Memoization](https://github.com/user-attachments/assets/51d8a42c-a4ec-4245-8f13-5c3ea86dee35)
+
 
 This code can significantly speed up the factorial function. For example, factorial(100) takes about 100 milliseconds to compute without memoization, but it takes only about 1 millisecond to compute with memoization.
 
-![fab recursion](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTThztkp6clLr9H16wEbhl9hA_Q5KDgYidBQ&usqp=CAU)
+
+![fab recursion](https://github.com/user-attachments/assets/0b05cda4-301a-4e3c-8329-137864579729)
+
 
 ## Event Loop
 
@@ -894,21 +902,24 @@ Timer done!
 
 #### [Detail Article](https://www.javascripttutorial.net/javascript-event-loop/)
 
-![settimeout](https://static.wixstatic.com/media/0f65e1_a50ce7f9ceec402e82e63c6ccddc40a4~mv2.gif)
+![Detail Article](https://github.com/user-attachments/assets/5abe2e0f-ab96-4071-8c03-898843445bbc)
+
 
 #### [JS Event LOOP](https://www.thetechplatform.com/post/the-javascript-event-loop-explained)
 
-![EventLoop](https://miro.medium.com/max/672/1*SNu8b0NKs9cBB9JsvNXKcA.png)
+![EventLoop](https://github.com/user-attachments/assets/94e1bdf5-4db6-4696-9387-535a738f039e)
 
-![EventLoop](https://miro.medium.com/max/1400/1*LvbUhFpMUeN9xoaazrp_gQ.jpeg)
+![EventLoop](https://github.com/user-attachments/assets/b47b2b40-5ccd-45e7-991f-f37c7c44f564)
 
-![Event Loop](https://i.ibb.co/nbQc6sk/Javascript-event-loop.png)
+![EventLoop](https://github.com/user-attachments/assets/b1a41a4f-d554-4473-ae3e-a2a13162b55f)
 
-![EventLoop](https://scaler.com/topics/images/event-loop-javascript.webp)
+![EventLoop](https://github.com/user-attachments/assets/164e5b41-5b37-44df-8fac-29089e58b3cd)
 
-![Web Apis](https://user-images.githubusercontent.com/85479513/221345755-331450d0-acbc-49d3-89ea-64eff8087ef8.png)
+![Web Apis](https://github.com/user-attachments/assets/b6c48f01-6c8a-428f-9e9b-0f16896384aa)
 
-![Event Loop](https://user-images.githubusercontent.com/85479513/221345784-9d74770f-6f8d-4b75-8927-26856c4f9d84.png)
+
+![Event Loop](https://github.com/user-attachments/assets/2998ef8b-d992-4f8a-8d0b-9dbe97a29de6)
+
 
 ![25 JS Advance Concepts For interview](./assets/images/image.png)
 
